@@ -23,7 +23,7 @@ public interface IMobile {
 
     public boolean isPlayer(int player);
 
-    public boolean setDogfightModel(DogfightModel dogfightModel);
+    public void setDogfightModel(DogfightModel dogfightModel);
 
     public boolean hit();
 
