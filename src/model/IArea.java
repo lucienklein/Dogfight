@@ -1,7 +1,9 @@
 package model;
 
+import java.awt.Image;
+
 public interface IArea {
-    default String getDimension() {
-        return this.Dimension;
-    }
+    public Dimension getDimension();
+
+    public Image getImage();
 }

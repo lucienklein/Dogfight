@@ -1,5 +1,8 @@
 package model;
 
+import java.awt.Image;
+import java.awt.Point;
+
 public interface IMobile {
     public Direction getDirection();
 
@@ -19,7 +22,7 @@ public interface IMobile {
 
     public void move();
 
-    public void placeInArea(Area area);
+    public void placeInArea(IArea area);
 
     public boolean isPlayer(int player);
 

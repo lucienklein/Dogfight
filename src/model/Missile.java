@@ -12,19 +12,19 @@ public class Missile {
 
     }
 
-    public int getWidthWithADirection(Direction direction){
-        return
+    public int getWidthWithADirection(Direction direction) {
+        return 0;
     }
 
-    public int getHeightWithADirection(Direction direction){
-        return
+    public int getHeightWithADirection(Direction direction) {
+        return 0;
     }
 
     public void move() {
 
     }
 
-    public boolean isWeapon(){
-        return 
+    public boolean isWeapon() {
+        return false;
     }
 }
