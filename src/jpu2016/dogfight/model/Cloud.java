@@ -1,4 +1,4 @@
-package model;
+package jpu2016.dogfight.model;
 
 public class Cloud {
     private final int SPEED = 1;
