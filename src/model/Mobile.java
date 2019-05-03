@@ -1,53 +1,95 @@
 package model;
 
 import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.ImageObserver;
+import java.awt.image.ImageProducer;
 
 public class Mobile implements IMobile {
 
     private int speed;
+    private Direction direction;
+    private Position position;
+    private Image image;
+    private Dimension dimension;
 
-    public Mobile(Direction direction, Position position, int speed, String image) {
+    public Mobile(Dimension dimension) {
+
+    }
+
+    public Mobile(Direction direction, Position position, Dimension dimension, int speed, String image) {
+        this.direction = direction;
+        this.position = position;
+        this.speed = speed;
+        this.image = new Image() {
+
+            @Override
+            public int getWidth(ImageObserver observer) {
+                return 0;
+            }
+
+            @Override
+            public ImageProducer getSource() {
+                return null;
+            }
+
+            @Override
+            public Object getProperty(String name, ImageObserver observer) {
+                return null;
+            }
+
+            @Override
+            public int getHeight(ImageObserver observer) {
+                return 0;
+            }
+
+            @Override
+            public Graphics getGraphics() {
+                return null;
+            }
+        };
 
     }
 
     @Override
     public Direction getDirection() {
-        return null;
+        return direction;
     }
 
     @Override
     public void setDirection(Direction direction) {
-
+        this.direction = direction;
     }
 
     @Override
-    public Point getPosition() {
-        return null;
+    public Position getPosition() {
+        return this.position;
     }
 
     @Override
     public Dimension getDimension() {
-        return null;
+        return this.dimension;
     }
 
     @Override
     public int getWidth() {
-        return 0;
+        return this.dimension.getWidth();
     }
 
     @Override
     public int getHeight() {
-        return 0;
+        return this.dimension.getHeigth();
     }
 
     @Override
     public int getSpeed() {
-        return 0;
+        return this.speed;
     }
 
     @Override
     public Image getImage() {
-        return null;
+        return this.image;
     }
 
     @Override
@@ -56,7 +98,7 @@ public class Mobile implements IMobile {
     }
 
     @Override
-    public void placeInArea(Area area) {
+    public void placeInArea(IArea area) {
 
     }
 
@@ -71,7 +113,7 @@ public class Mobile implements IMobile {
     }
 
     public DogfightModel getDogfightModel() {
-        return this.dogfightModel;
+        return null;
     }
 
     @Override
@@ -89,18 +131,18 @@ public class Mobile implements IMobile {
     }
 
     public void moveUp() {
-
+        this.direction = Direction.UP;
     }
 
     public void moveRight() {
-
+        this.direction = Direction.RIGHT;
     }
 
     public void moveDown() {
-
+        this.direction = Direction.DOWN;
     }
 
     public void moveLeft() {
-
+        this.direction = Direction.LEFT;
     }
 }

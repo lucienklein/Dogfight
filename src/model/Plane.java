@@ -1,18 +1,33 @@
 package model;
 
-public class Plane {
-    private final int SPEED = 20;
-    private final int WIDTH = 100;
-    private final int HEIGHT = 30;
+import java.awt.Dimension;
+
+public class Plane extends Mobile {
+    private final static int SPEED = 20;
+    private final static int WIDTH = 100;
+    private final static int HEIGHT = 30;
+    public final static Dimension dimension = new Dimension(WIDTH, HEIGHT);
 
     private int player;
 
-    public Plane(int player, Direction direction, Position position, String image) {
+    public Plane(Direction direction, Position position, Dimension dimension, int speed, String image) {
 
     }
 
+    public Plane(final int player, final Direction direction, final Position position, final String image) {
+        super(direction, position, dimension, SPEED, image);
+        this.player = player;
+    }
+
     public boolean isPlayer(int player) {
-        return false;
+        if (this.player > 1) {
+            return false;
+        }
+
+        else {
+            return true;
+        }
+
     }
 
     public boolean hit() {

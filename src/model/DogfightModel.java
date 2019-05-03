@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.Observable;
 
 public class DogfightModel implements IDogfightModel {
+    private Sky sky;
 
     public DogfightModel() {
-
+        sky = new Sky(dimension);
     }
 
     @Override

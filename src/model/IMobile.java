@@ -1,14 +1,13 @@
 package model;
 
 import java.awt.Image;
-import java.awt.Point;
 
 public interface IMobile {
     public Direction getDirection();
 
     public void setDirection(Direction direction);
 
-    public Point getPosition();
+    public Position getPosition();
 
     public Dimension getDimension();
 

@@ -4,12 +4,14 @@ public class Dimension {
     private int width;
     private int heigth;
 
-    public void Dimension(int witdht, int heigth) {
-
+    public void Dimension(int width, int heigth) {
+        this.width = width;
+        this.heigth = heigth;
     }
 
     public void Dimension(Dimension dimension) {
-
+        this.width = dimension.width;
+        this.heigth = dimension.heigth;
     }
 
     /**
